@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <test verbose="2" preserve-order="true" name="C:/Users/udayprsingh/IdeaProjects/MainAssignmentRestAssured">
+        <classes>
+            <class name="api.engine.endpoints.RestAssuredTest">
+                <methods>
+                    <include name="authenticationTest"/>
+                    <include name="addTask"/>
+                    <include name="validateUser"/>
+                    <include name="getTask"/>
+                    <include name="paginationFor2"/>
+                    <include name="paginationFor5"/>
+                    <include name="paginationFor10"/>
+                    <include name="invalidauthenticationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

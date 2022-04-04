@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta charset='utf-8'>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">C:/Users/udayprsingh/IdeaProjects/MainAssignmentRestAssured</a></td><td class="numi">7</td><td class="numi">7</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">54.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr id="t1"><th colspan="5">C:/Users/udayprsingh/IdeaProjects/MainAssignmentRestAssured &#8212; failed</th></tr>
+<tr class="failedodd"><td>api.engine.endpoints.RestAssuredTest</td><td><a href="#m1"><b>invalidauthenticationTest</b>  </a></td><td class="numi">1</td><td>1649044030236</td><td class="numi">1683</td></tr>
+<tr><th colspan="5">C:/Users/udayprsingh/IdeaProjects/MainAssignmentRestAssured &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="7">api.engine.endpoints.RestAssuredTest</td><td><a href="#m2"><b>paginationFor5</b>  </a></td><td class="numi">1</td><td>1649044026061</td><td class="numi">1913</td></tr><tr class="passedodd"><td><a href="#m3"><b>validateUser</b>  </a></td><td class="numi">1</td><td>1649044020481</td><td class="numi">1710</td></tr><tr class="passedodd"><td><a href="#m4"><b>authenticationTest</b>  </a></td><td class="numi">1</td><td>1649043977568</td><td class="numi">5805</td></tr><tr class="passedodd"><td><a href="#m5"><b>paginationFor10</b>  </a></td><td class="numi">1</td><td>1649044028013</td><td class="numi">2186</td></tr><tr class="passedodd"><td><a href="#m6"><b>addTask</b>  </a></td><td class="numi">1</td><td>1649043983426</td><td class="numi">37027</td></tr><tr class="passedodd"><td><a href="#m7"><b>paginationFor2</b>  </a></td><td class="numi">1</td><td>1649044024092</td><td class="numi">1928</td></tr><tr class="passedodd"><td><a href="#m8"><b>getTask</b>  </a></td><td class="numi">1</td><td>1649044022210</td><td class="numi">1842</td></tr>
+</table>
+<h1>C:/Users/udayprsingh/IdeaProjects/MainAssignmentRestAssured</h1>
+<h2 id="m1">api.engine.endpoints.RestAssuredTest:invalidauthenticationTest</h2>
+<div>
+<div class="stacktrace">io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+	at api.engine.endpoints.RestAssuredTest.invalidauthenticationTest(RestAssuredTest.java:181)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+Caused by: groovy.json.JsonException: A JSON payload should start with an openning curly brace &apos;{&apos; or an openning square bracket &apos;[&apos;.
+Instead, &apos;&quot;E11000 duplicate key error collection: todo-list.users index: email_1 dup key: { email: &quot;mohit31@gmail.com&quot; }&quot;&apos; was found on line: 1, column: 1
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:114)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)
+	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+	... 31 more
+</div>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">api.engine.endpoints.RestAssuredTest:authenticationTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">api.engine.endpoints.RestAssuredTest:paginationFor5</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">api.engine.endpoints.RestAssuredTest:paginationFor10</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">api.engine.endpoints.RestAssuredTest:addTask</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">api.engine.endpoints.RestAssuredTest:validateUser</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">api.engine.endpoints.RestAssuredTest:paginationFor2</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">api.engine.endpoints.RestAssuredTest:getTask</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>
