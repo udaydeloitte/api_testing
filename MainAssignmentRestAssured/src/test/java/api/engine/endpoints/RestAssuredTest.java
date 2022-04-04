@@ -24,10 +24,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 @Listeners(ExtentReport.class)
 public class RestAssuredTest {
     static Logger log = Logger.getLogger(String.valueOf(RestAssuredTest.class));
-    private String username;
-    private String email;
-    private String password;
-    public String tokenGenerated;
+    //private String username;
+    public String username;
+    public String email;
+    public String password;
+    public static String tokenGenerated;
     private double age;
     @BeforeMethod
     public void registerUser() throws IOException {
@@ -51,7 +52,7 @@ public class RestAssuredTest {
     }
 
     @Test(priority = 1)
-    public void authenticationTest() throws IOException {
+    public void RegisterUser() throws IOException {
         RestAssured.baseURI = "https://api-nodejs-todolist.herokuapp.com";
         RequestSpecification request = RestAssured.given();
         String payload = "{\n" +
@@ -120,7 +121,7 @@ public class RestAssuredTest {
         log.info("task added and validated successfully");
     }
     @Test(priority = 3)
-    public void validateUser(){
+    public void LoginUser(){
         RestAssured.baseURI = "https://api-nodejs-todolist.herokuapp.com/user/me";
         RequestSpecification request = RestAssured.given();
         request.header("Authorization","Bearer "+ tokenGenerated)
@@ -171,7 +172,7 @@ public class RestAssuredTest {
         Assert.assertEquals(response10.statusCode(),200);
     }
     @Test(priority = 8)
-    public void invalidauthenticationTest() throws IOException {
+    public void RegisterWithSameDetailTest() throws IOException {
         RestAssured.baseURI = "https://api-nodejs-todolist.herokuapp.com";
         RequestSpecification request = RestAssured.given();
         String payload = "{\n" +
@@ -182,18 +183,10 @@ public class RestAssuredTest {
         request.header("Content-Type", "application/json");
         Response responsefromGeneratedToken = request.body(payload).post("/user/register");
         responsefromGeneratedToken.prettyPrint();
-        String jsonString = responsefromGeneratedToken.getBody().asString();
-        tokenGenerated = JsonPath.from(jsonString).get("token");
-        request.header("Authorization", "Bearer" + tokenGenerated)
-                .header("Content-Type", "application/json");
-        String loginDetails = "{\n" +
-                "  \"email\" : \""+email+"\",\n" +
-                "  \"password\" : \""+password+"\"\n" +
-                "}";
 
-        Response responseLogin= request.body(loginDetails).post("/user/login");
-        responseLogin.prettyPrint();
-        
+        Assert.assertEquals(responsefromGeneratedToken.statusCode(),400);
+        log.info("User is already registered: Duplicate entry");
+
     }
     @Test(priority = 9)
     public void loginNotRegisterdUser()
@@ -210,6 +203,7 @@ public class RestAssuredTest {
         System.out.println(actual);
         String expected ="Unable to login";
         Assert.assertNotEquals(actual,expected);
+        log.info("User is not registered");
 
     }
 
